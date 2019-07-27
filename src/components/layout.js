@@ -21,6 +21,11 @@ const Content = styled.div`
     min-height: calc(100vh - 200px);
   }
 `
+const Footer = styled.footer`
+  border-top: 1px solid #333;
+  padding-top: 20px;
+  text-align: center;
+`
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -38,9 +43,9 @@ const Layout = ({ children }) => {
       <Header siteTitle={data.site.siteMetadata.title} />
       <Content>
         <main>{children}</main>
-        <footer>
+        <Footer>
           © {new Date().getFullYear()}, Built by AK1103DEV
-        </footer>
+        </Footer>
       </Content>
     </>
   )
