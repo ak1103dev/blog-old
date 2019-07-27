@@ -3,7 +3,6 @@ import { FaFacebook, FaGithub, FaTwitter, FaLinkedin } from "react-icons/fa"
 import styled from 'styled-components'
 
 import Layout from "../components/layout"
-import Image from "../components/image"
 import SEO from "../components/seo"
 
 const Link = styled.a`
@@ -37,7 +36,7 @@ const ContactPage = () => (
     <h1>Contact</h1>
     {
       contacts.map(({ icon: Icon, link, color }) => (
-        <Link href={link} target="_blank" color={color}>
+        <Link key={link} href={link} target="_blank" color={color}>
           <Icon />
         </Link>
       ))
