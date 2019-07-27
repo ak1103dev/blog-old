@@ -1,7 +1,7 @@
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React, { useState } from "react"
-import styled from "styled-components"
+import styled from "@emotion/styled"
 
 const Container = styled.header`
   background: rgb(70, 89, 39);
