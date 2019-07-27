@@ -13,22 +13,6 @@ const DonationPage = () => (
   <Layout>
     <SEO title="Donation" />
     <h1>Donation</h1>
-    <h2>Confirm Payment</h2>
-    <Formik
-      onSubmit={(values, { setSubmitting }) => {
-        axios.post('https://localhost:9999/api/post', values)
-      }}
-    >
-      {() => (
-        <Form>
-          <Input placeholder="First Name" />
-          <Input placeholder="Last Name" />
-          <Button type="submit">
-            Submit
-          </Button>
-        </Form>
-      )}
-    </Formik>
   </Layout>
 )
 
