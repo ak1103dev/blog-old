@@ -28,6 +28,8 @@ const AboutPage = () => (
         <p>I am Blogger, Developer, and Investor.</p>
         <p>Hello everyone. The blog shows my interests and hobbies.</p>
         <p>And shows my experience, knowledge, and opinion.</p>
+        <hr></hr>
+        <p>You can see <a href="https://resume.ak1103dev.com/">my resume</a> for more information about me</p>
       </div>
     </Section>
   </Layout>
