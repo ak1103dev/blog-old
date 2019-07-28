@@ -10,6 +10,8 @@ const Container = styled.header`
   a {
     color: white;
   }
+  /* display: flex; */
+  /* justify-content: space-between; */
 `
 const ListDropDown = styled.li`
   display: inline-block;
@@ -41,6 +43,15 @@ const DropDownMenu = styled.div`
     color: #444;
   }
 `
+const List = styled.ul`
+  listStyle: none;
+  display: flex;
+  float: right;
+  @media (max-width: 768px) {
+    float: none;
+    margin-bottom: 0;
+  }
+`
 
 const ListLink = props => (
   <li style={{ display: `inline-block`, marginRight: `1rem` }}>
@@ -55,7 +66,7 @@ const Header = ({ siteTitle }) => {
       <Link to="/" style={{ textShadow: `none`, backgroundImage: `none` }}>
         <h3 style={{ display: `inline` }}>AK1103DEV</h3>
       </Link>
-      <ul style={{ listStyle: `none`, float: `right`, display: 'flex' }}>
+      <List>
         <ListLink to="/">Home</ListLink>
         <ListLink to="/about/">About</ListLink>
         <ListDropDown>
@@ -69,7 +80,7 @@ const Header = ({ siteTitle }) => {
           }
         </ListDropDown>
         <ListLink to="/contact/">Contact</ListLink>
-      </ul>
+      </List>
     </Container>
   )
 }
