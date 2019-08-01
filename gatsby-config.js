@@ -1,3 +1,7 @@
+require("dotenv").config({
+  path: `.env.${process.env.NODE_ENV}`,
+})
+
 module.exports = {
   pathPrefix: "/blog",
   siteMetadata: {
@@ -46,5 +50,11 @@ module.exports = {
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     `gatsby-plugin-offline`,
+    {
+      resolve: 'gatsby-plugin-mixpanel',
+      options: {
+        apiToken: process.env.MIXPANEL_API_TOKEN,
+      },
+    },
   ],
 }
