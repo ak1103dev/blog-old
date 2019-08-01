@@ -47,7 +47,7 @@
     "format": "prettier --write src/**/*.{js,jsx}",
     "start": "npm run develop",
     "serve": "gatsby serve",
-    "predeploy": "gatsby build --prefix-paths",
+    "predeploy": "NODE_ENV=production gatsby build --prefix-paths",
     "deploy": "gh-pages -d public",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\""
   },
