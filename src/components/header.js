@@ -69,7 +69,7 @@ const Header = ({ siteTitle }) => {
       <List>
         <ListLink to="/">Home</ListLink>
         <ListLink to="/about/">About</ListLink>
-        <ListDropDown>
+        {/* <ListDropDown>
           <LinkToggle onClick={() => setShowMenu(!showMenu)}>Donation</LinkToggle>
           {
             showMenu &&
@@ -78,7 +78,7 @@ const Header = ({ siteTitle }) => {
               <Link to="/confirm-payment/">Confirm Payment</Link>
             </DropDownMenu>
           }
-        </ListDropDown>
+        </ListDropDown> */}
         <ListLink to="/contact/">Contact</ListLink>
       </List>
     </Container>
